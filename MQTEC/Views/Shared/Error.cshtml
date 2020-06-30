@@ -1,0 +1,58 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+
+
+<link href="~/css/ErrorClouds.css" rel="stylesheet" />
+<div id="clouds">
+    <div class="cloud x1"></div>
+    <div class="cloud x1_5"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+</div>
+
+@if (ViewBag.ErrorTitle == null)
+{
+    <div class='c'>
+        <div class='_2'>An Error occured while processing your request. The support team is notified and we are working on the fix.</div>
+        <a class='btn' href='#'>Please contact us esc@esc.com</a>
+    </div>
+}
+else
+{
+    <div class='c'>
+        <div class='_404'>404</div>
+        <hr>
+        <div class='_1'>THE PAGE</div>
+        <div class='_2'>WAS NOT FOUND</div>
+        <a class='btn' href='#'>BACK TO MARS</a>
+    </div>
+}
+
+
+
+
+@*<h1 class="text-danger">Error.</h1>
+    <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+    @if (Model.ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+
+    <h3>Development Mode</h3>
+    <p>
+        Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+    </p>
+    <p>
+        <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+        It can result in displaying sensitive information from exceptions to end users.
+        For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
+        and restarting the app.
+    </p>*@

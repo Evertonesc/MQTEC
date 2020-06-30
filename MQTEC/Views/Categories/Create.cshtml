@@ -1,0 +1,24 @@
+﻿@model MQTEC.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<link href="~/css/Inputs.css" rel="stylesheet" />*@
+<link href="~/css/Login.css" rel="stylesheet" />
+
+<h1>Create Category</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4 login-box">
+        <form asp-action="Save">
+            <div class="user-box">
+                <input asp-for="Title" type="text" required="" />
+                <label>Title</label>
+            </div>
+            <a asp-action="Index">Back to List</a>
+            <span></span>
+            <input class="saveBtn" type="submit" value="Create" />
+        </form>
+    </div>
+</div>

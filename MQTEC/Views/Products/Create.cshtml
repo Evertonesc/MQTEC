@@ -1,0 +1,33 @@
+﻿@model MQTEC.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link href="~/css/Login.css" rel="stylesheet" />
+
+<h1>Add a Product</h1>
+
+<div class="row">
+    <div class="col-md-4 login-box">
+        <form asp-action="Save">
+            <div class="user-box">
+                <input asp-for="Title" type="text" required="" />
+                <label>Title</label>
+            </div>
+            <div class="user-box">
+                <input asp-for="Quantity" required="" />
+                <label>Quantity</label>
+            </div>
+            <div class="user-box">
+                <input asp-for="Price" />
+                <label>Price</label>
+            </div>
+            <div class="user-box">
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <a asp-action="Index">Back to List</a>
+            <input type="submit" value="Create" class="saveBtn" />
+        </form>
+    </div>
+</div>
